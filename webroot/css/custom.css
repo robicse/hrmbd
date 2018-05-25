@@ -1,0 +1,179 @@
+.user-panel > .info > p{
+	line-height: 35px;
+}
+.custom-table-header th{
+	background: #222D32;
+	color: white;
+	text-transform: uppercase;
+	vertical-align: middle !important;
+}
+.custom-table-header th a{
+	color: white;
+}
+table a[href$="&direction=desc"]::before{
+	content: " ";
+}
+table a[href$="&direction=asc"]::after{
+	content: " ";
+}
+.pagination li.ellipsis{
+	display: none;
+}
+#HeaderAjaxLoader{
+	display: none;
+	height: 35px;
+	width: 35px;
+}
+.error-message{
+	color: red;
+	background: rgba(0,0,0,.04);
+	padding: 5px;
+}
+.align-middle{
+	vertical-align: middle !important;
+}
+#Actions .checkbox label{
+	display: block;
+	background: rgba(0,0,0,.04);
+	padding: 5px;
+}
+#Actions .checkbox label input{
+	position: relative;
+	float: right;
+	margin: 1px;
+}
+/*SIDEBAR ACTIVE/FOCUS*/
+.childActive{
+	background: #3c8dbc;
+}
+.childActive a{
+	color: white !important;
+}
+/*Select 2 Dropdowns*/
+.select2-container--default .select2-selection--single{
+	border-radius: 0px;
+}
+.select2-container .select2-selection--single{
+	height: 34px;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow{
+	height: 32px;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice{
+	background: #3C8DBC;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove{
+	color: white;
+}
+#CreateOrRecover{
+	margin-top: 10px;
+}
+/*Service Tree View*/
+.service-treeview-menu{
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+.service-treeview-menu li{
+	position: relative;
+}
+.service-treeview-menu label{
+	padding: 8px;
+	padding-left: 30px;
+	position: relative;
+}
+.service-treeview-menu label input{
+	top: 6px;
+}
+.service-treeview-menu .service-treeview-menu{
+	display: none;
+}
+.service-sub-treeview-menu .service-treeview-menu{
+	margin-left: 15px;
+}
+.service-treeview-menu .form-group{
+	background: #ECF0F5;
+	margin: 2px;
+}
+.service-treeview-menu .ControlNavigation{
+	position: relative;
+}
+.service-treeview-menu .ToggleList{
+	position: absolute;
+	cursor: pointer;
+	background: #3C8DBC;
+	color: white;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	padding: 0px 30px;
+}
+.service-treeview-menu .ToggleList i.fa{
+	margin-top: 10px;
+}
+.ControlNavigation .number{
+	position: absolute;
+	width: 125px;
+	top: -1px;
+	right: 76px;
+	background: red;
+	z-index: 10000;
+}
+.MultipleSelectOptions option{
+	padding: 8px;
+	margin-bottom: 1px;
+	background: #ECF0F5;
+}
+.middle-align{
+	vertical-align: middle !important;
+}
+#WorkshopAddForm .ControlNavigation .number input{
+	display: none;
+}
+.navbar-nav > .user-menu > .dropdown-menu > li.user-header{
+	height: auto;
+	min-height: auto;
+}
+.navbar-nav > .user-menu > .dropdown-menu > .user-footer{
+	background: navy;
+}
+.widget-user .widget-user-header{
+	position: relative;
+}
+.ViewDetails{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	width: 100%;
+	display: none;
+	z-index: 99;
+	border: none;
+}
+.widget-user:hover .ViewDetails{
+	display: block;
+}
+/*DATEPICKER CALENDAR 100% WIDTH*/
+.datepicker-inline {
+    width: 100% !important;
+}
+.datepicker table {
+    width: 100% !important;
+}
+.DashboardMenus .info-box-content span.info-box-text{
+	line-height: 80px;
+}
+.UsersDashboard .small-box h3{
+	font-size: 20px;
+}
+#homeServiceApplications .checkbox label{
+	display: block;
+	background: rgba(0,0,0,0.03);
+	padding: 10px;
+}
+#homeServiceApplications .checkbox label input{
+	margin: 3px;
+	position: relative;
+	float: left;
+}
