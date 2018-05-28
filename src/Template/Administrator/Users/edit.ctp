@@ -70,6 +70,7 @@ $this->Form->templates($custom_template);
                             <div class="col-md-6">
                                 <?php echo $this->Form->input('active',['options'=>['0'=>'No','1'=>'Yes']]); ?>
                             </div>
+                            <?php /* ?>
                             <div class="col-md-4">
                                 <?php
                                     $ajaxUrl = $this->Url->build([
@@ -106,6 +107,97 @@ $this->Form->templates($custom_template);
                                         'empty'=>'Select Upazila'
                                     ]);
                                 ?>
+                            </div>
+                            <?php */ ?>
+                            <div class="col-md-6">
+                                <?php echo $this->Form->input('card_uniqueid'); ?>
+                            </div>
+                            <div class="col-md-6">
+                                <?php echo $this->Form->input('card_number'); ?>
+                            </div>
+                            <div class="col-md-6">
+                                <!-- Date -->
+                                <div class="form-group">
+                                    <label>Join Date</label>
+                                    <div class="input-group date">
+                                      <div class="input-group-addon">
+                                        <i class="fa fa-calendar"></i>
+                                      </div>
+                                      <input id="joinDate" type="text" name="join_date" value="<?php if(isset($user['join_date'])){echo $user['join_date'];} ?>" class="form-control">
+                                    </div>
+                                    <!-- /.input group -->
+                                </div>
+                                <!-- /.form group -->
+                            </div>
+                            <div class="col-md-6">
+                                <!-- End Date -->
+                                <div class="form-group">
+                                    <label>Confirmation Date</label>
+                                    <div class="input-group date">
+                                      <div class="input-group-addon">
+                                        <i class="fa fa-calendar"></i>
+                                      </div>
+                                      <input id="confirmationDate" name="confirmation_date" value="<?php if(isset($user['confirmation_date'])){echo $user['confirmation_date'];} ?>" class="form-control" type="text">
+                                    </div>
+                                    <!-- /.input group -->
+                                </div>
+                                <!-- /.form group -->
+                            </div>
+                            <div class="col-md-6">
+                                <?php echo $this->Form->input('personal_email'); ?>
+                            </div>
+                            <div class="col-md-6">
+                                <?php echo $this->Form->input('present_address'); ?>
+                            </div>
+                            <div class="col-md-6">
+                                <?php echo $this->Form->input('permanent_address'); ?>
+                            </div>
+                            <div class="col-md-6">
+                                <!-- End Date -->
+                                <div class="form-group">
+                                    <label>Date of Birth</label>
+                                    <div class="input-group date">
+                                      <div class="input-group-addon">
+                                        <i class="fa fa-calendar"></i>
+                                      </div>
+                                      <input id="dateOfBirthDate" name="date_of_birth" value="<?php if(isset($user['date_of_birth'])){echo $user['date_of_birth'];} ?>" class="form-control" type="text">
+                                    </div>
+                                    <!-- /.input group -->
+                                </div>
+                                <!-- /.form group -->
+                            </div>
+                            <div class="col-md-6">
+                                <?php echo $this->Form->input('gender',['options'=>['male'=>'Male','female'=>'Female']]); ?>
+                            </div>
+                            <div class="col-md-6">
+                                <?php echo $this->Form->input('marital_status',['options'=>['single'=>'Single','married'=>'Married']]); ?>
+                            </div>
+                            <div class="col-md-6">
+                                <?php echo $this->Form->input('nationalid'); ?>
+                            </div>
+                            <div class="col-md-6">
+                                <?php echo $this->Form->input('blood'); ?>
+                            </div>
+                            <div class="col-md-6">
+                                <?php echo $this->Form->input('emergency_number',['type'=>'number']); ?>
+                            </div>
+                            <div class="col-md-6">
+                                <?php echo $this->Form->input('emergency_number_relation'); ?>
+                            </div>
+                            <div class="col-md-6">
+                                <?php echo $this->Form->input('notice_period',['type'=>'number']); ?>
+                            </div>
+                            <div class="col-md-6">
+                                <?php echo $this->Form->input('provident_fund',['options'=>['yes'=>'Yes','no'=>'No']]); ?>
+                            </div>
+                            <div class="col-md-6">
+                                <?php echo $this->Form->input('salary_bank_payment_mode',['options'=>['yes'=>'Yes','no'=>'No']]); ?>
+                            </div>
+                            <div class="col-md-6">
+                                <?php echo $this->Form->input('bank_id',['options'=>$banks,'empty'=>'--Select--']); ?>
+                            </div>
+                            <div class="col-md-6">
+                                <?php echo $this->Form->input('bank_branch_id',['options'=>$bankBranchs,'empty'=>'--Select--']); ?>
                             </div>
                         </div>
                         <div class="box-footer text-right">

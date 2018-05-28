@@ -23,16 +23,7 @@ class UsersTable extends Table{
             'foreignKey' => 'user_group_id',
             'joinType' => 'INNER'
         ]);
-        $this->hasMany('AppointmentDetails', [
-            'foreignKey' => 'user_id'
-        ]);
-        $this->hasMany('Appointments', [
-            'foreignKey' => 'user_id'
-        ]);
-        $this->hasMany('Cards', [
-            'foreignKey' => 'user_id'
-        ]);
-        $this->belongsTo('Divisions', [
+        /*$this->belongsTo('Divisions', [
             'foreignKey' => 'division_id',
             'joinType' => 'LEFT'
         ]);
@@ -43,13 +34,7 @@ class UsersTable extends Table{
         $this->belongsTo('DivisionDistrictUpazilas', [
             'foreignKey' => 'division_district_upazila_id',
             'joinType' => 'LEFT'
-        ]);
-        $this->hasMany('Vehicles', [
-            'foreignKey' => 'user_id'
-        ]);
-        $this->hasMany('Workshops', [
-            'foreignKey' => 'user_id'
-        ]);
+        ]);*/
     }
 
     public function validationDefault(Validator $validator){

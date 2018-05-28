@@ -105,11 +105,15 @@ class UsersController extends AppController{
     }
 
     public function edit($id = null){
+        $this->loadModel('Banks');
+        $this->loadModel('BankBranchs');
         $user = $this->Users->get($id, [
             'contain' => []
         ]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $user = $this->Users->patchEntity($user, $this->request->data);
+            #debug($user);
+            #die();
             if ($this->Users->save($user)) {
                 $this->Flash->success(__('The user has been saved.'));
 
@@ -119,7 +123,9 @@ class UsersController extends AppController{
             }
         }
         $userGroups = $this->Users->UserGroups->find('list', ['limit' => 1000]);
-        $this->set(compact('user', 'userGroups'));
+        $banks = $this->Banks->find('list', ['limit' => 100]);
+        $bankBranchs = $this->BankBranchs->find('list', ['limit' => 1000]);
+        $this->set(compact('user', 'userGroups', 'banks','bankBranchs'));
         $this->set('_serialize', ['user']);
     }
 

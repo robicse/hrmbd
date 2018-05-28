@@ -36,6 +36,7 @@ $cakeDescription = 'hrmbd :';
                 'dist/css/AdminLTE.min.css',
                 'dist/css/skins/_all-skins.min.css',
                 'plugins/select2/select2.min.css', #Select 2
+                'plugins/datepicker/datepicker3.css', #Select 2
                 'custom.css'
             )
         )
@@ -67,11 +68,46 @@ $cakeDescription = 'hrmbd :';
           'dist/js/app.min.js',
           'dist/js/demo.js',
           'plugins/select2/select2.min.js',  #Select 2
+          'plugins/datepicker/bootstrap-datepicker.js',  #Select 2
           'custom-sidebar-click'
         )
       );
 
       echo $this->fetch('footerScript');
     ?>
+
+    <script>
+
+      /*WEEKENDS AND HOLIDAYS START*/
+      $('#datepicker').datepicker({
+        /*CUSTOMIZE START*/
+        format: 'yyyy-mm-dd',
+        /*CUSTOMIZE END*/
+        //autoclose: true
+      })
+      /*WEEKENDS AND HOLIDAYS END*/
+
+      /*LEAVE QUATERS START*/
+      $('#startDate').datepicker({
+        format: 'yyyy-mm-dd'
+      });
+      $('#endDate').datepicker({
+        format: 'yyyy-mm-dd'
+      });
+      /*LEAVE QUATERS END*/
+
+      /*USERS START*/
+      $('#joinDate').datepicker({
+        format: 'yyyy-mm-dd'
+      });
+      $('#confirmationDate').datepicker({
+        format: 'yyyy-mm-dd'
+      });
+      $('#dateOfBirthDate').datepicker({
+        format: 'yyyy-mm-dd'
+      });
+      /*USERS END*/
+
+    </script>
     </body>
 </html>
